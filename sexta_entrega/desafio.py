@@ -33,7 +33,7 @@ def cadastrar_aluno(alunos, nome):
         return True
     return False
 
-
+# Código que será executado na opção Cadastrar aluno
 def opc_cadastrar_aluno():
     nome = pede_nome()
     if cadastrar_aluno(alunos, nome):
@@ -41,13 +41,16 @@ def opc_cadastrar_aluno():
         return
     print("Não foi possível cadastrar o aluno, verifique se é um nome válido")
 
+# Código que será executado na opção Listar alunos
 def opc_listar_alunos():
     listar_alunos(alunos)
 
+# Código que será executado na opção Buscar aluno
 def opc_buscar_aluno():
     nome = pede_nome()
     buscar_aluno(alunos, nome)
 
+# Código que será executado na opção Remover aluno
 def opc_buscar_aluno():
     listar_alunos(alunos)
     print("Aluno a remover")
@@ -57,11 +60,13 @@ def opc_buscar_aluno():
         return
     print("Aluno não estava cadastrado")
 
+# Código que será executado na opção Mostrar quantidade de alunos
 def opc_mostrar_quantidade_alunos():
     if tem_alunos(alunos):
         print(f"Atualmente existem {len(alunos)} cadastrados.")
     else:
         print("Nenhum aluno cadastrado")
+
 
 lista = [
     ("Cadastrar aluno", opc_cadastrar_aluno),
